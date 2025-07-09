@@ -10,10 +10,5 @@
 
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/index.ts" }
-  ],
-  "env": {
-    "MONGODB_URI": "@mongouri",
-    "NEXTAUTH_SECRET": "@nextauth-secret",
-    "FRONTEND_URL": "@frontend-url"
-  }
+  ]
 }
