@@ -1,25 +1,16 @@
 {
-  // Opt-in to the latest platform features
   "version": 2,
 
-  /* ---------- Build ---------- */
   "builds": [
     {
-      // Every file under /api will be compiled with @vercel/node
       "src": "api/**/*.ts",
       "use": "@vercel/node"
     }
   ],
 
-  /* ---------- Routing ---------- */
   "routes": [
-    // Map any request that starts with /api/ to the single Express function
     { "src": "/api/(.*)", "dest": "/api/index.ts" }
   ],
-
-  /* ---------- Environment ---------- */
-  // Store sensitive values safely in the Vercel dashboard,
-  // then reference them here.  (DO NOT hard-code secrets.)
   "env": {
     "MONGODB_URI": "@mongouri",
     "NEXTAUTH_SECRET": "@nextauth-secret",
